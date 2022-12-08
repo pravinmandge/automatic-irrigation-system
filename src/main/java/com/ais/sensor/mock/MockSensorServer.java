@@ -3,7 +3,6 @@ package com.ais.sensor.mock;
 import lombok.extern.slf4j.Slf4j;
 import org.mockserver.client.server.MockServerClient;
 import org.mockserver.integration.ClientAndServer;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;

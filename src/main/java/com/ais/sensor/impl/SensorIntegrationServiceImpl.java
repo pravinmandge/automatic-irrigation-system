@@ -2,7 +2,6 @@ package com.ais.sensor.impl;
 
 import com.ais.dto.SlotDTO;
 import com.ais.sensor.SensorIntegrationService;
-import com.ais.sensor.mock.MockSensorServer;
 import com.ais.sensor.model.SensorRequest;
 import com.ais.sensor.model.SensorResponse;
 import com.ais.sensor.model.SensorStatus;
@@ -17,9 +16,6 @@ import org.apache.hc.core5.http.io.entity.StringEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
-import java.util.concurrent.TimeUnit;
-
-import static org.mockserver.model.HttpResponse.response;
 
 @Service
 @Slf4j

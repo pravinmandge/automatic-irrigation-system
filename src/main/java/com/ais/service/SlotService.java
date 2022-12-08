@@ -1,7 +1,6 @@
 package com.ais.service;
 
 import com.ais.dto.SlotDTO;
-import com.ais.model.Slot;
 
 import java.util.List;
 

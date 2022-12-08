@@ -1,12 +1,10 @@
 package com.ais.repository;
 
-import com.ais.model.PlotIrrigation;
 import com.ais.model.Slot;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.UUID;
 
 @Repository
 public interface SlotRepository extends JpaRepository<Slot, String> {
