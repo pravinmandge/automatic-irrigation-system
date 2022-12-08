@@ -1,0 +1,553 @@
+{
+	"info": {
+		"_postman_id": "71cdc802-001e-4c58-b284-866e165f8cdf",
+		"name": "Automatic Irrigation System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17960815"
+	},
+	"item": [
+		{
+			"name": "Sensor",
+			"item": [
+				{
+					"name": "Send Sensor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" : \"12\",\n    \"durationInMin\" : \"5\",\n    \"waterNeeded\" : 50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1080/api/v1/sensors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1080",
+							"path": [
+								"api",
+								"v1",
+								"sensors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Send Sensor",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\" : \"12\",\n    \"durationInMin\" : \"5\",\n    \"waterNeeded\" : 50\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1080/api/v1/sensors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1080",
+									"path": [
+										"api",
+										"v1",
+										"sensors"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"12\",\n    \"message\": \"Request received successfully.\",\n    \"status\": \"ACTIVE\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Plots",
+			"item": [
+				{
+					"name": "Create Plot",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"My Plot 2\",\n    \"sensorUrl\" : \"http://localhost:1080/api/v1/sensors\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/plots",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"plots"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Plot",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"My Plot 2\",\n    \"sensorUrl\" : \"http://localhost:1080/api/v1/sensors\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/plots",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"plots"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"3af01221-379b-4faf-bfd9-62b80f115257\",\n    \"name\": \"My Plot 2\",\n    \"slotIds\": [],\n    \"sensorUrl\": \"http://localhost:1080/api/v1/sensors\",\n    \"plotIrrigationId\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Plot",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"My Plot 1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/plots/4cdcf867-b4f0-4763-8776-2109c075bf5c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"plots",
+								"4cdcf867-b4f0-4763-8776-2109c075bf5c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Plot",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/plots/4cdcf867-b4f0-4763-8776-2109c075bf5c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"plots",
+										"4cdcf867-b4f0-4763-8776-2109c075bf5c"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"4cdcf867-b4f0-4763-8776-2109c075bf5c\",\n    \"name\": \"My Plot 1\",\n    \"slotIds\": [\n        \"e30c5b26-c33b-44e8-90d1-4bc44ae9efef\",\n        \"7619fb14-4cf3-40a6-96ce-18a0a6c9a570\",\n        \"8a4b7977-a2af-4940-84bd-b45bc15003cd\",\n        \"fb7af79e-e9a4-43fd-ba58-661ccc5eec8b\",\n        \"55b97e74-d341-4318-a1d5-e069cca5f7c1\"\n    ],\n    \"sensorUrl\": \"http://localhost:1080/api/v1/sensors\",\n    \"plotIrrigationId\": \"e28c6aa6-8ba1-4192-beca-a1a4b73035a1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Plots",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/plots",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"plots"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Plots",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/plots",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"plots"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"4cdcf867-b4f0-4763-8776-2109c075bf5c\",\n        \"name\": \"My Plot 1\",\n        \"slotIds\": [\n            \"e30c5b26-c33b-44e8-90d1-4bc44ae9efef\",\n            \"7619fb14-4cf3-40a6-96ce-18a0a6c9a570\",\n            \"8a4b7977-a2af-4940-84bd-b45bc15003cd\",\n            \"55b97e74-d341-4318-a1d5-e069cca5f7c1\"\n        ],\n        \"sensorUrl\": \"http://localhost:1080/api/v1/sensors\",\n        \"plotIrrigationId\": \"e28c6aa6-8ba1-4192-beca-a1a4b73035a1\"\n    },\n    {\n        \"id\": \"3af01221-379b-4faf-bfd9-62b80f115257\",\n        \"name\": \"My Plot 2\",\n        \"slotIds\": [\n            \"6b164ec3-d9fc-4650-a2fd-679431813ee3\",\n            \"23b84381-6ea9-4d7b-9b7b-875fddf1b866\",\n            \"e4f69158-ab47-4ea2-b38b-5ed401463739\",\n            \"4be91b83-a244-417c-a968-f5d2fa2f8c9c\",\n            \"80a7110a-d290-4bdc-89a5-5429ceb281b3\"\n        ],\n        \"sensorUrl\": \"http://localhost:1080/api/v1/sensors\",\n        \"plotIrrigationId\": \"87d446a8-c6c1-4eff-b26d-1fd3c47324e6\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Update Plot",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"My Plot 2\",\n    \"sensorUrl\" : \"http://localhost:1080/api/v1/sensors\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/plots/3af01221-379b-4faf-bfd9-62b80f115257",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"plots",
+								"3af01221-379b-4faf-bfd9-62b80f115257"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Plot",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"My Plot 2\",\n    \"sensorUrl\" : \"http://localhost:1080/api/v1/sensors\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/plots/3af01221-379b-4faf-bfd9-62b80f115257",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"plots",
+										"3af01221-379b-4faf-bfd9-62b80f115257"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"id\": \"3af01221-379b-4faf-bfd9-62b80f115257\",\n    \"name\": \"My Plot 2\",\n    \"slotIds\": [],\n    \"sensorUrl\": \"http://localhost:1080/api/v1/sensors\",\n    \"plotIrrigationId\": \"e28c6aa6-8ba1-4192-beca-a1a4b73035a1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Configure Plot",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"durationInMin\" : \"2\",\n    \"intervalInMin\" : \"1\",\n    \"waterNeededInMm\" : \"60\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/plots/592a73b3-7427-4c76-9520-22d038aea3bf/configure",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"plots",
+								"592a73b3-7427-4c76-9520-22d038aea3bf",
+								"configure"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Configure Plot",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"durationInMin\" : \"2\",\n    \"intervalInMin\" : \"1\",\n    \"waterNeededInMm\" : \"60\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/plots/fa1b3b32-fefb-48c8-b88d-bd6a7c2e27bd/configure",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"plots",
+										"fa1b3b32-fefb-48c8-b88d-bd6a7c2e27bd",
+										"configure"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"87d446a8-c6c1-4eff-b26d-1fd3c47324e6\",\n    \"plotId\": \"3af01221-379b-4faf-bfd9-62b80f115257\",\n    \"durationInMin\": 2,\n    \"intervalInMin\": 1,\n    \"waterNeededInMm\": 60,\n    \"nextIrrigationTime\": 0,\n    \"status\": \"IDLE\",\n    \"createdTime\": 1670478834772,\n    \"updatedTime\": 1670478834772\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Slots",
+			"item": [
+				{
+					"name": "Get All Slots",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/slots",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"slots"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Slots",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/slots",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"slots"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"8a4b7977-a2af-4940-84bd-b45bc15003cd\",\n        \"waterNeeded\": 50,\n        \"status\": \"COMPLETED\",\n        \"plotId\": \"4cdcf867-b4f0-4763-8776-2109c075bf5c\",\n        \"retryCount\": 0,\n        \"lastRetryTime\": 1670478808956,\n        \"durationInMin\": 1,\n        \"intervalInMin\": 2\n    },\n    {\n        \"id\": \"80a7110a-d290-4bdc-89a5-5429ceb281b3\",\n        \"waterNeeded\": 60,\n        \"status\": \"COMPLETED\",\n        \"plotId\": \"3af01221-379b-4faf-bfd9-62b80f115257\",\n        \"retryCount\": 0,\n        \"lastRetryTime\": 1670478839124,\n        \"durationInMin\": 2,\n        \"intervalInMin\": 1\n    },\n    {\n        \"id\": \"4be91b83-a244-417c-a968-f5d2fa2f8c9c\",\n        \"waterNeeded\": 60,\n        \"status\": \"COMPLETED\",\n        \"plotId\": \"3af01221-379b-4faf-bfd9-62b80f115257\",\n        \"retryCount\": 0,\n        \"lastRetryTime\": 1670478919265,\n        \"durationInMin\": 2,\n        \"intervalInMin\": 1\n    },\n    {\n        \"id\": \"7619fb14-4cf3-40a6-96ce-18a0a6c9a570\",\n        \"waterNeeded\": 50,\n        \"status\": \"COMPLETED\",\n        \"plotId\": \"4cdcf867-b4f0-4763-8776-2109c075bf5c\",\n        \"retryCount\": 0,\n        \"lastRetryTime\": 1670478959350,\n        \"durationInMin\": 1,\n        \"intervalInMin\": 2\n    },\n    {\n        \"id\": \"55b97e74-d341-4318-a1d5-e069cca5f7c1\",\n        \"waterNeeded\": 50,\n        \"status\": \"COMPLETED\",\n        \"plotId\": \"4cdcf867-b4f0-4763-8776-2109c075bf5c\",\n        \"retryCount\": 0,\n        \"lastRetryTime\": 1670479180731,\n        \"durationInMin\": 1,\n        \"intervalInMin\": 2\n    },\n    {\n        \"id\": \"6b164ec3-d9fc-4650-a2fd-679431813ee3\",\n        \"waterNeeded\": 60,\n        \"status\": \"COMPLETED\",\n        \"plotId\": \"3af01221-379b-4faf-bfd9-62b80f115257\",\n        \"retryCount\": 0,\n        \"lastRetryTime\": 1670479180731,\n        \"durationInMin\": 2,\n        \"intervalInMin\": 1\n    },\n    {\n        \"id\": \"e4f69158-ab47-4ea2-b38b-5ed401463739\",\n        \"waterNeeded\": 60,\n        \"status\": \"COMPLETED\",\n        \"plotId\": \"3af01221-379b-4faf-bfd9-62b80f115257\",\n        \"retryCount\": 0,\n        \"lastRetryTime\": 1670479282938,\n        \"durationInMin\": 2,\n        \"intervalInMin\": 1\n    },\n    {\n        \"id\": \"e30c5b26-c33b-44e8-90d1-4bc44ae9efef\",\n        \"waterNeeded\": 50,\n        \"status\": \"COMPLETED\",\n        \"plotId\": \"4cdcf867-b4f0-4763-8776-2109c075bf5c\",\n        \"retryCount\": 0,\n        \"lastRetryTime\": 1670479343073,\n        \"durationInMin\": 1,\n        \"intervalInMin\": 2\n    },\n    {\n        \"id\": \"23b84381-6ea9-4d7b-9b7b-875fddf1b866\",\n        \"waterNeeded\": 60,\n        \"status\": \"COMPLETED\",\n        \"plotId\": \"3af01221-379b-4faf-bfd9-62b80f115257\",\n        \"retryCount\": 0,\n        \"lastRetryTime\": 1670479363142,\n        \"durationInMin\": 2,\n        \"intervalInMin\": 1\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get All Slots By Plot Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/slots?plotId=592a73b3-7427-4c76-9520-22d038aea3bf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"slots"
+							],
+							"query": [
+								{
+									"key": "plotId",
+									"value": "592a73b3-7427-4c76-9520-22d038aea3bf"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Slots By Plot Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/slots?plotId=4cdcf867-b4f0-4763-8776-2109c075bf5c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"slots"
+									],
+									"query": [
+										{
+											"key": "plotId",
+											"value": "4cdcf867-b4f0-4763-8776-2109c075bf5c"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"8a4b7977-a2af-4940-84bd-b45bc15003cd\",\n        \"waterNeeded\": 50,\n        \"status\": \"COMPLETED\",\n        \"plotId\": \"4cdcf867-b4f0-4763-8776-2109c075bf5c\",\n        \"retryCount\": 0,\n        \"lastRetryTime\": 1670478808956,\n        \"durationInMin\": 1,\n        \"intervalInMin\": 2\n    },\n    {\n        \"id\": \"7619fb14-4cf3-40a6-96ce-18a0a6c9a570\",\n        \"waterNeeded\": 50,\n        \"status\": \"COMPLETED\",\n        \"plotId\": \"4cdcf867-b4f0-4763-8776-2109c075bf5c\",\n        \"retryCount\": 0,\n        \"lastRetryTime\": 1670478959350,\n        \"durationInMin\": 1,\n        \"intervalInMin\": 2\n    },\n    {\n        \"id\": \"55b97e74-d341-4318-a1d5-e069cca5f7c1\",\n        \"waterNeeded\": 50,\n        \"status\": \"COMPLETED\",\n        \"plotId\": \"4cdcf867-b4f0-4763-8776-2109c075bf5c\",\n        \"retryCount\": 0,\n        \"lastRetryTime\": 1670479180731,\n        \"durationInMin\": 1,\n        \"intervalInMin\": 2\n    },\n    {\n        \"id\": \"e30c5b26-c33b-44e8-90d1-4bc44ae9efef\",\n        \"waterNeeded\": 50,\n        \"status\": \"COMPLETED\",\n        \"plotId\": \"4cdcf867-b4f0-4763-8776-2109c075bf5c\",\n        \"retryCount\": 0,\n        \"lastRetryTime\": 1670479343073,\n        \"durationInMin\": 1,\n        \"intervalInMin\": 2\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
